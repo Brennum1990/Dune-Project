@@ -1,11 +1,16 @@
 :root {
 	/* Colors */
-	--first-color: white;
-	--second-color: black;
+	--first-color: #FFFFFF;
+	--second-color: #000000;
 	--third-color: ;
 	--fourth-color: ;
 	--highlight-color: #b0cbf5;
 
 	/* Fonts */
 	--font-body-text: 1rem 'Dune Rise'; 
+
+	/* Grid */
+	--gap-column: 1rem;
+	--gap-row: 1rem;
+	--gap-section: 2rem;
 }
