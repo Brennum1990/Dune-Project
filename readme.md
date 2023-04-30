@@ -1,6 +1,6 @@
 ## Dune wiki page
 
-This website provides the user with information about Frank Herberts science fiction universe 'Dune'. 
+This website provides the user with information about Frank Herberts abundant sci-fi universe 'Dune'. 
 
 ## Contributors
 
@@ -16,11 +16,39 @@ https://github.com/users/Brennum1990/projects/2/views/1
 
 ## MVP
 
-Figma
-- 
+Overall
+- Create a frontend folder-directive  
+- Figma (desktop version):
+	- Main page (navigation - DVD style)
+	- Histories & lore
+		- Houses
+		- Characters
+		- Planets
+		- Organizations and Groups
+	- Books
+	- On screen (TV/films)
+	- Colors, fonts
+- Initialize a repository 
 
-Vscode
-- 
+Frontend
+- css
+	- base, reset, variables, main
+	- modules: 
+		- navigation
+		- 
+- html
+	- index
+	- histories & lore
+- js 
+	- main
+		- navigation 
 
 Sanity
-- 
+- Create a new project
+- Schemas: 
+	- Houses
+	- Characters
+	- Planets
+	- Organizations and Groups
+	- Books
+	- On screen (TV/films)
