@@ -1,5 +1,11 @@
 :root {
 	/* Colors */
-	
+	--first-color: white;
+	--second-color: black;
+	--third-color: ;
+	--fourth-color: ;
+	--highlight-color: #b0cbf5;
+
 	/* Fonts */
+	--font-body-text: 1rem 'Dune Rise'; 
 }
