@@ -1,12 +1,22 @@
+html {
+	font-size: 1vw;;
+}
+
 .bg {
-	background-image: url(../assets/Dune_background_05.jpeg);
+	background-image: url(../assets/Dune_background.jpeg);
 	height: 100vh;
 	width: 100vw;
 	background-position: center;	
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: sticky;
+	position: fixed;
 	z-index: -1;
 	top: 0;
 	left: 0;
+}
+
+@font-face {
+	font-family: 'Dune Rise';
+	src: url(./fonts/Dune_Rise.ttf);
+	src: url(./fonts/Dune_Rise.otf);
 }
