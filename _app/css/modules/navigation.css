@@ -1,0 +1,55 @@
+.navbar {
+	font: var(--font-body-text);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: .5rem;
+	width: 42.5vw;
+}
+
+.navbar__title {
+	font-size: 2rem;
+	color: var(--first-color);
+	text-decoration: none;
+	margin: 0 .5rem .25rem .5rem;
+}
+
+.navbar__books,
+.navbar__onscreen,
+.navbar__lore {
+	color: var(--first-color);
+	text-decoration: none;
+	opacity:0;
+	animation:fade 1.5s ease-in-out forwards;
+}
+
+.navbar__title:hover,
+.navbar__books:hover,
+.navbar__onscreen:hover,
+.navbar__lore:hover {
+	color: var(--highlight-color);
+	transform: scale(1.05);
+	transition: all 0.2s ease-in-out;
+	transition-delay: 0.1s;
+}
+
+@keyframes fade {
+	0% {
+		top: 10px;
+		left: 10px;
+		filter: blur(20px);
+		opacity: 0;
+	}
+	50% {
+		filter: blur(10px);
+		opacity: 0.8;
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
