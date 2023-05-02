@@ -1,0 +1,14 @@
+audio {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 1rem;
+	justify-content: flex-end;
+}
+
+audio::-webkit-media-controls-panel,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-timeline-container {
+	background-color: var(--highlight-color);
+}
