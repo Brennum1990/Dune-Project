@@ -7,7 +7,6 @@ import onscreen from './documents/onscreen.js'
 import planets from './documents/planets.js'
 import settings from './documents/settings.js'
 
-
 export default [
   books,
   category,
@@ -16,5 +15,5 @@ export default [
   houses,
   onscreen,
   planets,
-  settings,
+  settings
 ]

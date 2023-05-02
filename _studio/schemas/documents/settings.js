@@ -6,7 +6,20 @@ export default {
 		{
 			title: 'Name',
 			name: 'name',
-			type: 'string',
+			type: 'string'
 		},
-	]
+		{
+			title: 'Visible',
+			name: 'visible',
+			type: 'boolean'
+		},
+	],
+	
+	preview: {
+		prepare: () => {
+			return {
+				title: 'Settings'
+			}
+		}
+	}
 }
