@@ -5,5 +5,4 @@
 	align-items: flex-start;
 	column-gap: var(--gap-column);
 	row-gap: var(--gap-row);
-	background: var(--highlight-color);
 }

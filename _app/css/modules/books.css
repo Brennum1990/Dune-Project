@@ -1,0 +1,16 @@
+.books__card {
+	background: green;
+	padding: 1rem;
+}
+
+.books__image-frame {
+
+}
+
+.books__image {
+	object-fit: cover;
+}
+
+.books__text {
+	 
+}

@@ -1,0 +1,16 @@
+.houses__card {
+	background: lightblue;
+	padding: 1rem;
+}
+
+.houses__image-frame {
+
+}
+
+.houses__image {
+	object-fit: cover;
+}
+
+.houses__text {
+	 
+}

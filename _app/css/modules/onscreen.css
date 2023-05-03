@@ -1,0 +1,16 @@
+.onscreen__card {
+	background: lightcoral;
+	padding: 1rem;
+}
+
+.onscreen__image-frame {
+
+}
+
+.onscreen__image {
+	object-fit: cover;
+}
+
+.onscreen__text {
+	 
+}

@@ -1,0 +1,16 @@
+.planets__card {
+	background: lightyellow;
+	padding: 1rem;
+}
+
+.planets__image-frame {
+
+}
+
+.planets__image {
+	object-fit: cover;
+}
+
+.planets__text {
+	 
+}
