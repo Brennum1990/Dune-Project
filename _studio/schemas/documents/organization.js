@@ -1,6 +1,6 @@
 export default {
-	title: 'Groups',
-	name: 'groups',
+	title: 'Organization',
+	name: 'organization',
 	type: 'document',
 	fields: [
 		{

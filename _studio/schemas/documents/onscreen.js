@@ -9,6 +9,14 @@ export default {
 			type: 'string'
 		},
 		{
+			title: 'Release date',
+			name: 'releaseDate',
+			type: 'date',
+			options: {
+			  dateFormat: 'DD-MM-YYYY',
+			}
+		},
+		{
 			title: 'Slug',
 			name: 'slug',
 			type: 'slug'
