@@ -7,7 +7,7 @@ export default Structure => {
 			.items([
 				documentTypeListItem('books'),
 				documentTypeListItem('characters'),
-				documentTypeListItem('groups'),
+				documentTypeListItem('organization'),
 				documentTypeListItem('houses'),
 				documentTypeListItem('onscreen'),
 				documentTypeListItem('planets'),
