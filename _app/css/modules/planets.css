@@ -1,16 +1,16 @@
-.planets__card {
+.planet__card {
 	background: lightyellow;
 	padding: 1rem;
 }
 
-.planets__image-frame {
+.planet__image-frame {
 
 }
 
-.planets__image {
+.planet__image {
 	object-fit: cover;
 }
 
-.planets__text {
+.planet__text {
 	 
 }

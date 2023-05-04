@@ -1,16 +1,16 @@
-.books__card {
+.book__card {
 	background: green;
 	padding: 1rem;
 }
 
-.books__image-frame {
+.book__image-frame {
 
 }
 
-.books__image {
+.book__image {
 	object-fit: cover;
 }
 
-.books__text {
+.book__text {
 	 
 }

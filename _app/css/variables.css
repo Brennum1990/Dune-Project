@@ -8,7 +8,8 @@
 	--highlight-secondary-color: #4682e2;
 
 	/* Fonts */
-	--font-body-text: 1rem 'Dune Rise'; 
+	--font-header-text: 1rem 'Dune Rise'; 
+	--font-body-text: 1rem 'Doppio One'; 
 
 	/* Grid */
 	--gap-column: 1rem;

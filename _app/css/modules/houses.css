@@ -1,16 +1,16 @@
-.houses__card {
+.house__card {
 	background: lightblue;
 	padding: 1rem;
 }
 
-.houses__image-frame {
+.house__image-frame {
 
 }
 
-.houses__image {
+.house__image {
 	object-fit: cover;
 }
 
-.houses__text {
+.house__text {
 	 
 }

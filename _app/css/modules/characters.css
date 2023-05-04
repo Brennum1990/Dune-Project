@@ -1,16 +1,16 @@
-.characters__card {
+.character__card {
 	background: grey;
 	padding: 1rem;
 }
 
-.characters__image-frame {
+.character__image-frame {
 
 }
 
-.characters__image {
+.character__image {
 	object-fit: cover;
 }
 
-.characters__text {
+.character__text {
 	 
 }

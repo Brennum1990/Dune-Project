@@ -2,11 +2,14 @@
 @import './variables.css';
 @import './base.css';
 @import './grid.css';
+@import './fonts.css';
 
 @import './modules/navigation.css';
+
 @import './modules/audio.css';
 @import './modules/planets.css';
 @import './modules/characters.css';
 @import './modules/houses.css';
 @import './modules/onscreen.css';
 @import './modules/books.css';
+@import './modules/organization.css';
