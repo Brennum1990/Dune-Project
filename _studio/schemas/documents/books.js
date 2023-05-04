@@ -19,7 +19,11 @@ export default {
 		{
 			title: 'Slug',
 			name: 'slug',
-			type: 'slug'
+			type: 'slug',
+			options:
+			{
+				source: 'title',
+			}
 		},
 		{
 			title: 'Image',
@@ -27,10 +31,9 @@ export default {
 			type: 'image'
 		},
 		{
-			title: 'Text field',
-			name: 'TextField',
-			type: 'array',
-			of: [{type: 'block'}]
+			title: 'Text',
+			name: 'text',
+			type: 'text',
 		},
 		{
 			title: 'Category',

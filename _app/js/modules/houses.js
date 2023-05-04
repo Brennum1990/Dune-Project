@@ -1,11 +1,11 @@
 import {sanity} from '../sanity.js';
 
 export default async function houses() {
-	const houseContainer = document.querySelector('.houses');
+	const houseContainer = document.querySelector('.house');
 	const query = `*[_type == 'houses'] | order(name asc) {
 		_id,
 		name,
-		TextField,
+		text,
 		category,
 	}`;
 	
@@ -18,27 +18,30 @@ export default async function houses() {
 		for (const houses of dune) {
 			// Creating elements
 			const houseCard = document.createElement('div');
+			const houseTitle = document.createElement('h1');
 			const houseImageFrame = document.createElement('div');
 			const houseImage = document.createElement('img'); 
 			const houseText = document.createElement('p');
 			
 			// Rendering elements 
-			houseCard.innerText = houses.name;
+			houseTitle.innerText = houses.name;
 			// houseImage.src = `${houses.image.asset}`;
 			houseImage.setAttribute('alt', `${houses.name}`);
-			houseText.innerText = houses.TextField[0].children[0].text; 
+			houseText.innerText = houses.text; 
 		
 			// Hierarchy of house details
 			houseContainer.appendChild(houseCard);
+				houseCard.appendChild(houseTitle);
 				houseCard.appendChild(houseImageFrame);
 					houseImageFrame.appendChild(houseImage);
 				houseCard.appendChild(houseText);
 
 			// Creating classnames
-			houseCard.className = 'houses__card';
-			houseImageFrame.className = 'houses__image-frame';
-			houseImage.className = 'houses__image';
-			houseText.className = 'houses__text'; 
+			houseCard.className = 'house__card';
+			houseTitle.className = 'house__title';
+			houseImageFrame.className = 'house__image-frame';
+			houseImage.className = 'house__image';
+			houseText.className = 'house__text'; 
 		}
 	}
 renderHouses(); 
