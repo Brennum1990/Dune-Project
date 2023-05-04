@@ -1,5 +1,6 @@
 html {
-	font-size: 1vw;;
+	font-size: 1vw;
+	font: var(--font-body-text);
 }
 
 .bg {
@@ -15,8 +16,6 @@ html {
 	left: 0;
 }
 
-@font-face {
-	font-family: 'Dune Rise';
-	src: url(./fonts/Dune_Rise.ttf);
-	src: url(./fonts/Dune_Rise.otf);
+h1 {
+	font: var(--font-header-text);
 }
