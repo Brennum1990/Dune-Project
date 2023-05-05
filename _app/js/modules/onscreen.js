@@ -1,4 +1,5 @@
 import {sanity} from '../sanity.js';
+import collapsible from './collapsible.js';
 
 export default async function onScreen() {
 	const onscreenContainer = document.querySelector('.onscreen');
@@ -6,12 +7,11 @@ export default async function onScreen() {
 		_id,
 		name,
 		releaseDate,
+		"imageUrl": image.asset->url,
 		text,
 		category,
 	}`;
 	
-	// 	"imageUrl": image.asset->url
-
 	const media = await sanity.fetch(query); 
 		console.log(media)
 
@@ -19,36 +19,37 @@ export default async function onScreen() {
 		for (const onscreen of media) {
 			// Creating elements
 			const onscreenCard = document.createElement('div');
-			const onscreenTitle = document.createElement('h1');
+			const onscreenButton = document.createElement('button');
+			const onscreenInfo = document.createElement('div');
 			const onscreenImageFrame = document.createElement('div');
 			const onscreenImage = document.createElement('img'); 
 			const onscreenText = document.createElement('p');
 			const onscreenReleaseDate = document.createElement('p');
 			
 			// Rendering elements 
-			onscreenTitle.innerText = onscreen.name;
-			// onscreenImage.src = `${onscreen.image.asset}`;
+			onscreenButton.innerText = onscreen.name;
+			onscreenImage.src = onscreen.imageUrl;
 			onscreenImage.setAttribute('alt', `${onscreen.name}`);
 			onscreenText.innerText = onscreen.text; 
 			onscreenReleaseDate.innerText = onscreen.releaseDate;
 		
 			// Hierarchy of onscreen details
 			onscreenContainer.appendChild(onscreenCard);
-				onscreenCard.appendChild(onscreenTitle);
-				onscreenCard.appendChild(onscreenReleaseDate);
-				onscreenCard.appendChild(onscreenImageFrame);
+			onscreenCard.appendChild(onscreenButton);
+			onscreenCard.appendChild(onscreenInfo);
+				onscreenInfo.appendChild(onscreenImageFrame);
 					onscreenImageFrame.appendChild(onscreenImage);
-				onscreenCard.appendChild(onscreenText);
-				
-
+				onscreenInfo.appendChild(onscreenText);
+			
 			// Creating classnames
 			onscreenCard.className = 'onscreen__card';
-			onscreenTitle.className = 'onscreen__title';
+			onscreenButton.className = 'onscreen__button';
+			onscreenInfo.className = 'onscreen__info';
 			onscreenImageFrame.className = 'onscreen__image-frame';
 			onscreenImage.className = 'onscreen__image';
-			onscreenText.className = 'onscreen__text'; 
-			onscreenReleaseDate.className = 'onscreen__release-date'; 
+			onscreenText.className = 'onscreen__text';
 		}
 	}
 renderOnScreen(); 
+collapsible();
 }

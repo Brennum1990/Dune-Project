@@ -1,16 +1,16 @@
 import {sanity} from '../sanity.js';
+import collapsible from './collapsible.js';
 
 export default async function planets() {
 	const planetContainer = document.querySelector('.planet');
 	const query = `*[_type == 'planets'] | order(name asc) {
 		_id,
 		name,
+		"imageUrl": image.asset->url,
 		text,
 		category,
 	}`;
 	
-	// 	"imageUrl": image.asset->url
-
 	const dune = await sanity.fetch(query); 
 		console.log(dune)
 
@@ -26,7 +26,7 @@ export default async function planets() {
 			
 			// Rendering elements 
 			planetButton.innerText = planets.name;
-			// planetImage.src = `${planets.image.asset}`;
+			planetImage.src = planets.imageUrl;
 			planetImage.setAttribute('alt', `${planets.name}`);
 			planetText.innerText = planets.text; 
 		
@@ -48,4 +48,5 @@ export default async function planets() {
 		}
 	}
 renderPlanets(); 
+collapsible();
 }
