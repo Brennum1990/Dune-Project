@@ -1,10 +1,44 @@
-.planet__card {
-	background: lightyellow;
-	padding: 1rem;
+.planet {
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
 }
 
-.planet__image-frame {
+.planet__button {
+	background-color: #eee;
+	color: #444;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	position: relative;
+}
 
+.planet__button::after {
+	content: "\002B";
+	position: absolute;
+	right: 1rem;
+}
+
+.planet__button.active::after {
+	content: "\2212";
+}
+
+.active, 
+.planet__button:hover {
+	background-color: #ccc;
+}
+
+.planet__info {
+	padding: 0 18px;
+	overflow: hidden;
+	/* display: none; */
+	background-color: #f1f1f1;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
 }
 
 .planet__image {
@@ -12,5 +46,5 @@
 }
 
 .planet__text {
-	 
+	font: var(--font-body-text);
 }
