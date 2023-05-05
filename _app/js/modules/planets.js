@@ -18,27 +18,30 @@ export default async function planets() {
 		for (const planets of dune) {
 			// Creating elements
 			const planetCard = document.createElement('div');
-			const planetTitle = document.createElement('h1');
+			const planetButton = document.createElement('button');
+			const planetInfo = document.createElement('div');
 			const planetImageFrame = document.createElement('div');
 			const planetImage = document.createElement('img'); 
 			const planetText = document.createElement('p');
 			
 			// Rendering elements 
-			planetTitle.innerText = planets.name;
+			planetButton.innerText = planets.name;
 			// planetImage.src = `${planets.image.asset}`;
 			planetImage.setAttribute('alt', `${planets.name}`);
 			planetText.innerText = planets.text; 
 		
 			// Hierarchy of planet details
 			planetContainer.appendChild(planetCard);
-				planetCard.appendChild(planetTitle);
-				planetCard.appendChild(planetImageFrame);
-					planetImageFrame.appendChild(planetImage);
-				planetCard.appendChild(planetText);
+				planetCard.appendChild(planetButton);
+				planetCard.appendChild(planetInfo);
+					planetInfo.appendChild(planetImageFrame);
+						planetImageFrame.appendChild(planetImage);
+					planetInfo.appendChild(planetText);
 
 			// Creating classnames
 			planetCard.className = 'planet__card';
-			planetTitle.className = 'planet__title';
+			planetButton.className = 'planet__button';
+			planetInfo.className = 'planet__info';
 			planetImageFrame.className = 'planet__image-frame';
 			planetImage.className = 'planet__image';
 			planetText.className = 'planet__text'; 
