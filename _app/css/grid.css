@@ -1,8 +1,7 @@
 .grid {
 	width: 100%;
-	display: inline-block;
-	grid-template-columns: repeat(12, 1fr);
+	/* grid-template-columns: repeat(12, 1fr);
 	align-items: flex-start;
 	column-gap: var(--gap-column);
-	row-gap: var(--gap-row);
+	row-gap: var(--gap-row); */
 }

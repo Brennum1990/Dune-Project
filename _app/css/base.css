@@ -4,7 +4,7 @@ html {
 }
 
 .bg {
-	background-image: url(../assets/dune-images/Background/Dune_background_04.jpg);
+	background-image: url(../assets/dune-images/Background/Dune_background_01.jpeg);
 	height: 100vh;
 	width: 100vw;
 	background-position: center;	
@@ -14,8 +14,4 @@ html {
 	z-index: -1;
 	top: 0;
 	left: 0;
-}
-
-h1 {
-	font: var(--font-header-text);
 }
