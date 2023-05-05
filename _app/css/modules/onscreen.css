@@ -1,10 +1,48 @@
-.onscreen__card {
-	background: lightcoral;
-	padding: 1rem;
+.onscreen {
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
 }
 
-.onscreen__image-frame {
+.onscreen__button {
+	background-color: #eee;
+	color: #444;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	position: relative;
+	transition: max-height 0.2s ease-out;
+}
 
+.onscreen__button::after {
+	content: "\002B";
+	position: absolute;
+	right: 1rem;
+}
+
+.onscreen__button.active::after {
+	content: "\2212";
+}
+
+.active {
+	display: block;
+}
+
+.active, 
+.onscreen__button:hover {
+	background-color: #ccc;
+}
+
+.onscreen__info {
+	padding: 0 18px;
+	overflow: hidden;
+   /* display: none;  */
+	background-color: #f1f1f1;
+ 	max-height: 0; 
 }
 
 .onscreen__image {
@@ -12,5 +50,5 @@
 }
 
 .onscreen__text {
-	 
+	font: var(--font-body-text);
 }

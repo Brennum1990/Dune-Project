@@ -1,10 +1,48 @@
-.book__card {
-	background: green;
-	padding: 1rem;
+.book {
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
 }
 
-.book__image-frame {
+.book__button {
+	background-color: #eee;
+	color: #444;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	position: relative;
+	transition: max-height 0.2s ease-out;
+}
 
+.book__button::after {
+	content: "\002B";
+	position: absolute;
+	right: 1rem;
+}
+
+.book__button.active::after {
+	content: "\2212";
+}
+
+.active {
+	display: block;
+}
+
+.active, 
+.book__button:hover {
+	background-color: #ccc;
+}
+
+.book__info {
+	padding: 0 18px;
+	overflow: hidden;
+   /* display: none;  */
+	background-color: #f1f1f1;
+ 	max-height: 0; 
 }
 
 .book__image {
@@ -12,5 +50,5 @@
 }
 
 .book__text {
-	 
+	font: var(--font-body-text);
 }

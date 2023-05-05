@@ -1,10 +1,48 @@
-.organization__card {
-	background: lightseagreen;
-	padding: 1rem;
+.organization {
+	width: 100%;
+	border: none;
+	text-align: center;
+	outline: none;
 }
 
-.organization__image-frame {
+.organization__button {
+	background-color: #eee;
+	color: #444;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	position: relative;
+	transition: max-height 0.2s ease-out;
+}
 
+.organization__button::after {
+	content: "\002B";
+	position: absolute;
+	right: 1rem;
+}
+
+.organization__button.active::after {
+	content: "\2212";
+}
+
+.active {
+	display: block;
+}
+
+.active, 
+.organization__button:hover {
+	background-color: #ccc;
+}
+
+.organization__info {
+	padding: 0 18px;
+	overflow: hidden;
+   /* display: none;  */
+	background-color: #f1f1f1;
+ 	max-height: 0; 
 }
 
 .organization__image {
@@ -12,5 +50,5 @@
 }
 
 .organization__text {
-	 
+	font: var(--font-body-text);
 }

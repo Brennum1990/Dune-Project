@@ -15,6 +15,7 @@
 	outline: none;
 	font-size: 15px;
 	position: relative;
+	transition: max-height 0.2s ease-out;
 }
 
 .planet__button::after {
@@ -27,6 +28,10 @@
 	content: "\2212";
 }
 
+.active {
+	display: block;
+}
+
 .active, 
 .planet__button:hover {
 	background-color: #ccc;
@@ -35,10 +40,9 @@
 .planet__info {
 	padding: 0 18px;
 	overflow: hidden;
-	/* display: none; */
+   /* display: none;  */
 	background-color: #f1f1f1;
-	max-height: 0;
-	transition: max-height 0.2s ease-out;
+ 	max-height: 0; 
 }
 
 .planet__image {
