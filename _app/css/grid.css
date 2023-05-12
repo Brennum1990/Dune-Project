@@ -1,7 +1,10 @@
-.sidepanel {
-	width: 35%;
+.grid {
+	width: 100vw;
+	height: fit-content;
+	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	align-items: flex-start;
-	column-gap: var(--gap-column);
-	row-gap: var(--gap-row); 
+	position: sticky;
+	/* column-gap: var(--gap-column);
+	row-gap: var(--gap-row);  */
 }

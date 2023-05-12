@@ -14,8 +14,7 @@ img {
 	width: 100%;
 }
 
-button {
+button, select {
 	cursor: pointer;
 	font: var(--font-header-text);
-	display: inline-block;
 }

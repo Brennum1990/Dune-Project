@@ -1,6 +1,5 @@
 html {
-	font-size: 1vw;
-	font: var(--font-body-text);
+	font-size: 2vw;
 }
 
 .bg {
@@ -10,6 +9,19 @@ html {
 	background-position: center;	
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+.lore-bg {
+	height: 100vh;
+	width: 100vw;
+	background-position: center;	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background: linear-gradient(180deg, #5F9690, #5D4B25);
 	position: fixed;
 	z-index: -1;
 	top: 0;
