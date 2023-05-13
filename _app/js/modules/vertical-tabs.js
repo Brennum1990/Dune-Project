@@ -1,18 +1,66 @@
 export default function tabs() {
 
-	let tabButtons = document.querySelectorAll('.planet__button');
-	let tabContent = document.querySelectorAll('.planet__info');
+	let planetTabBtns = document.querySelectorAll('.planet__button');
+	let planetContent = document.querySelectorAll('.planet__info');
 
-	tabButtons.forEach((tab, index) => {
+	planetTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
-			tabContent.forEach(content => {
+			planetContent.forEach(content => {
 				content.classList.remove('active');
 			});
-			tabButtons.forEach((tab) => {
+			planetTabBtns.forEach((tab) => {
 				tab.classList.remove('active');
 			});
-			tabContent[index].classList.add('active');
-			tabButtons[index].classList.add('active');
+			planetContent[index].classList.add('active');
+			planetTabBtns[index].classList.add('active');
+		}); 
+	});
+
+	let characterTabBtns = document.querySelectorAll('.character__button');
+	let characterContent = document.querySelectorAll('.character__info');
+
+	characterTabBtns.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			characterContent.forEach(content => {
+				content.classList.remove('active');
+			});
+			characterTabBtns.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			characterContent[index].classList.add('active');
+			characterTabBtns[index].classList.add('active');
+		}); 
+	});
+
+	let houseTabBtns = document.querySelectorAll('.house__button');
+	let houseContent = document.querySelectorAll('.house__info');
+
+	houseTabBtns.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			houseContent.forEach(content => {
+				content.classList.remove('active');
+			});
+			houseTabBtns.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			houseContent[index].classList.add('active');
+			houseTabBtns[index].classList.add('active');
+		}); 
+	});
+
+	let groupTabBtns = document.querySelectorAll('.organization__button');
+	let groupContent = document.querySelectorAll('.organization__info');
+
+	groupTabBtns.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			groupContent.forEach(content => {
+				content.classList.remove('active');
+			});
+			groupTabBtns.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			groupContent[index].classList.add('active');
+			groupTabBtns[index].classList.add('active');
 		}); 
 	});
 

@@ -1,8 +1,8 @@
 import {sanity} from '../sanity.js';
-import collapsible from './collapsible.js';
+import tabs from './vertical-tabs.js';
 
-export default async function houses() {
-	const houseContainer = document.querySelector('.house');
+export default async function house() {
+	const houseContainer = document.querySelector('.house__container');
 	const query = `*[_type == 'houses'] | order(name asc) {
 		_id,
 		name,
@@ -14,10 +14,9 @@ export default async function houses() {
 	const dune = await sanity.fetch(query); 
 		console.log(dune)
 
-	function renderHouses() {
+	function renderhouses() {
 		for (const houses of dune) {
 			// Creating elements
-			const houseCard = document.createElement('div');
 			const houseButton = document.createElement('button');
 			const houseInfo = document.createElement('div');
 			const houseImageFrame = document.createElement('div');
@@ -26,20 +25,20 @@ export default async function houses() {
 			
 			// Rendering elements 
 			houseButton.innerText = houses.name;
+			houseButton.setAttribute('alt', `${houses.name}`);
+			houseButton.setAttribute('type', 'tabs');
 			houseImage.src = houses.imageUrl;
 			houseImage.setAttribute('alt', `${houses.name}`);
 			houseText.innerText = houses.text; 
 		
 			// Hierarchy of house details
-			houseContainer.appendChild(houseCard);
-				houseCard.appendChild(houseButton);
-				houseCard.appendChild(houseInfo);
-					houseInfo.appendChild(houseImageFrame);
-						houseImageFrame.appendChild(houseImage);
-					houseInfo.appendChild(houseText);
+			houseContainer.appendChild(houseButton);
+			houseContainer.appendChild(houseInfo);
+				houseInfo.appendChild(houseImageFrame);
+					houseImageFrame.appendChild(houseImage);
+				houseInfo.appendChild(houseText);
 
 			// Creating classnames
-			houseCard.className = 'house__card';
 			houseButton.className = 'house__button';
 			houseInfo.className = 'house__info';
 			houseImageFrame.className = 'house__image-frame';
@@ -47,6 +46,6 @@ export default async function houses() {
 			houseText.className = 'house__text'; 
 		}
 	}
-renderHouses(); 
-collapsible(); 
+renderhouses(); 
+tabs();
 }

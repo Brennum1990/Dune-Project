@@ -8,11 +8,11 @@ import organization from "./modules/organizations.js";
 import category from "./modules/category.js";
 
 planets()
-// characters()
+characters()
 // onscreen()
-// houses()
+houses()
 // books()
-// organization()
+organization()
 // category()
 
 // Vscode

@@ -1,5 +1,5 @@
 import {sanity} from '../sanity.js';
-import collapsible from './collapsible.js';
+import collapsible from './vertical-tabs.js';
 
 export default async function books() {
 	const bookContainer = document.querySelector('.book');

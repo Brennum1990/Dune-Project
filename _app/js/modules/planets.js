@@ -1,8 +1,8 @@
 import {sanity} from '../sanity.js';
-import collapsible from './collapsible.js';
+import tabs from './vertical-tabs.js';
 
 export default async function planets() {
-	const planetContainer = document.querySelector('.planet');
+	const planetContainer = document.querySelector('.planet__container');
 	const query = `*[_type == 'planets'] | order(name asc) {
 		_id,
 		name,
@@ -17,7 +17,6 @@ export default async function planets() {
 	function renderPlanets() {
 		for (const planets of dune) {
 			// Creating elements
-			const planetCard = document.createElement('div');
 			const planetButton = document.createElement('button');
 			const planetInfo = document.createElement('div');
 			const planetImageFrame = document.createElement('div');
@@ -26,20 +25,20 @@ export default async function planets() {
 			
 			// Rendering elements 
 			planetButton.innerText = planets.name;
+			planetButton.setAttribute('alt', `${planets.name}`);
+			planetButton.setAttribute('type', 'tabs');
 			planetImage.src = planets.imageUrl;
 			planetImage.setAttribute('alt', `${planets.name}`);
 			planetText.innerText = planets.text; 
 		
 			// Hierarchy of planet details
-			planetContainer.appendChild(planetCard);
-				planetCard.appendChild(planetButton);
-				planetCard.appendChild(planetInfo);
-					planetInfo.appendChild(planetImageFrame);
-						planetImageFrame.appendChild(planetImage);
-					planetInfo.appendChild(planetText);
+			planetContainer.appendChild(planetButton);
+			planetContainer.appendChild(planetInfo);
+				planetInfo.appendChild(planetImageFrame);
+					planetImageFrame.appendChild(planetImage);
+				planetInfo.appendChild(planetText);
 
 			// Creating classnames
-			planetCard.className = 'planet__card';
 			planetButton.className = 'planet__button';
 			planetInfo.className = 'planet__info';
 			planetImageFrame.className = 'planet__image-frame';
@@ -48,5 +47,5 @@ export default async function planets() {
 		}
 	}
 renderPlanets(); 
-collapsible();
+tabs();
 }
