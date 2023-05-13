@@ -2,9 +2,22 @@
 	width: 100vw;
 	height: fit-content;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	align-items: flex-start;
-	position: sticky;
+	/* grid-gap: 20px; */
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas: 
+	"nav nav"
+	"tab1 dune-content"
+	"container1 dune-content"
+	"container-tab1 dune-content"
+	"tab2 dune-content"
+	"container2 dune-content"
+	"container-tab2 dune-content"
+	"tab3 dune-content"
+	"container3 dune-content"
+	"container-tab3 dune-content"
+	"tab4 dune-content"
+	"container4 dune-content"
+	"container-tab4 footer";
 	/* column-gap: var(--gap-column);
-	row-gap: var(--gap-row);  */
+	row-gap: var(--gap-row); */
 }
