@@ -8,14 +8,16 @@ import organization from "./modules/organizations.js";
 import category from "./modules/category.js";
 
 planets()
-characters()
-onscreen()
-houses()
-books()
-organization()
-category()
+// characters()
+// onscreen()
+// houses()
+// books()
+// organization()
+// category()
 
 // Vscode
-import collapsible from "./modules/collapsible.js";
+import tabs from "./modules/vertical-tabs.js";
+import showHide from "./modules/show-hide.js";
 
-collapsible()
+showHide()
+tabs()
