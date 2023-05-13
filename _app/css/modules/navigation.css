@@ -1,12 +1,14 @@
 .navbar {
 	font: var(--font-header-text);
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	display: flex;
 	justify-content: space-between;
 	padding: .5rem;
-	width: 42.5vw;
+	width: 80%;
+	grid-area: nav;
+	align-items: center;
 }
 
 .navbar__title {
@@ -16,8 +18,7 @@
 	margin: 0 .5rem .25rem .5rem;
 }
 
-.navbar__books,
-.navbar__onscreen,
+.navbar__books-media,
 .navbar__lore {
 	color: var(--first-color);
 	text-decoration: none;
@@ -26,8 +27,7 @@
 }
 
 .navbar__title:hover,
-.navbar__books:hover,
-.navbar__onscreen:hover,
+.navbar__books-media:hover,
 .navbar__lore:hover {
 	color: var(--highlight-color);
 	transform: scale(1.05);

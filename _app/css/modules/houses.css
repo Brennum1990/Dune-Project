@@ -1,54 +1,68 @@
 .house {
-	width: 100%;
-	border: none;
-	text-align: center;
-	outline: none;
-}
-
-.house__button {
-	background-color: #eee;
-	color: #444;
-	padding: 18px;
-	width: 100%;
+	background-color: var(--first-color);
+	padding: 10px;
 	border: none;
 	text-align: left;
 	outline: none;
 	font-size: 15px;
+	grid-area: tab3;
+}
+
+.house__container {
+	align-items: flex-start;
+	width: 100%;
+	grid-column: 1 / 4;
+	grid-area: container3;
+}
+
+.house__button {
+	background-color: #eee;
+	padding: 10px;
+	border: none;
+	outline: none;
+	text-align: left;
+	font-size: 15px;
 	position: relative;
-	transition: max-height 0.2s ease-out;
+	width: 100%;
+	grid-area: container-tab3;
 }
 
 .house__button::after {
-	content: "\002B";
 	position: absolute;
-	right: 1rem;
 }
 
-.house__button.active::after {
-	content: "\2212";
+.house:hover,
+.house__button:hover {
+	background-color: var(--highlight-color);
+}
+
+.house__info {
+	padding: 0 1rem 0 1rem;
+	background-color: #f1f1f1;
+	display: none;
+	grid-area: dune-content;
 }
 
 .active {
 	display: block;
+	grid-area: dune-content;
 }
 
-.active, 
-.house__button:hover {
-	background-color: #ccc;
-}
-
-.house__info {
-	padding: 0 18px;
-	overflow: hidden;
-   /* display: none;  */
-	background-color: #f1f1f1;
- 	max-height: 0; 
+.house__image-frame {
+	overflow: hidden; 
+	width: 50%;
+	padding: 1rem;
+	float: right;
+	margin: 1rem 0 0 0;
 }
 
 .house__image {
+	height: fit-content;
 	object-fit: cover;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .house__text {
 	font: var(--font-body-text);
+	margin-top: 1rem;
 }
