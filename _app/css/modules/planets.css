@@ -1,52 +1,37 @@
 .planet {
-	background-color: var(--first-color);
 	padding: 10px;
 	border: none;
 	text-align: left;
-	outline: none;
 	font-size: 15px;
-	grid-area: tab1;
+	grid-column: 1 / 2;
+	width: 100%;
 }
 
 .planet__container {
-	align-items: flex-start;
-	width: 100%;
-	grid-column: 1 / 4;
-	grid-area: container1;
+	grid-column: 1 / 2;
+	background-color: beige;
 }
 
 .planet__button {
+	width: 100%;
 	background-color: var(--third-color);
 	color: var(--first-color);
 	padding: 10px;
-	border: none;
-	outline: none;
+	border: none;		
 	text-align: left;
 	font-size: 15px;
 	position: relative;
-	width: 100%;
-	grid-area: container-tab1;
-}
-
-.planet__button::after {
-	position: absolute;
-}
-
-.planet:hover,
-.planet__button:hover {
-	background-color: var(--highlight-color);
+	overflow: hidden;
 }
 
 .planet__info {
 	padding: 0 1rem 0 1rem;
-	background-color: #f1f1f1;
 	display: none;
-	grid-area: dune-content;
 }
 
 .active {
-	display: block;
-	grid-area: dune-content;
+	grid-column: 2 / 4;
+	display: inline-block;
 }
 
 .planet__image-frame {
@@ -66,4 +51,19 @@
 .planet__text {
 	font: var(--font-body-text);
 	margin-top: 1rem;
+}
+
+.planet__button::after {
+	position: absolute;
+}
+
+.planet:hover,
+.planet__button:hover {
+	background-color: var(--highlight-color);
+}
+
+.content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
 }

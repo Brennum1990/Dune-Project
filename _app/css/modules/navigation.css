@@ -7,7 +7,8 @@
 	justify-content: space-between;
 	padding: .5rem;
 	width: 80%;
-	grid-area: nav;
+	/* grid-area: nav; */
+	grid-column: 1 / 2;
 	align-items: center;
 }
 
@@ -39,11 +40,11 @@
 	0% {
 		top: 10px;
 		left: 10px;
-		filter: blur(20px);
+		filter: blur(10px);
 		opacity: 0;
 	}
 	50% {
-		filter: blur(10px);
+		filter: blur(5px);
 		opacity: 0.8;
 	}
 	100% {
