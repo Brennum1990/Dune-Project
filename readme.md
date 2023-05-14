@@ -36,16 +36,23 @@ Overall
 
 Frontend
 - css
-	- base, reset, variables, main
+	- base, reset, variables, grid, fonts, main
 	- modules: 
 		- navigation
+		- planets, characters, houses, organizations, 
+		TV/film, books
+		- audio?
 		- 
 - html
 	- index
 	- histories & lore
+	- books & media
 - js 
 	- main
-		- navigation 
+		- navigation
+		- vertical tabs
+		- show hide tab buttons
+		- toggle
 
 Sanity
 - Create a new project

@@ -8,32 +8,34 @@
 	<title>Dune Wiki page</title>
 </head>
 <body>
-	<section class="grid">
-		<nav class="navbar">
-			<a class="navbar__title" href="./index.html"
-				alt="Main title - Link to main page">Dune	
-			</a>
-			<a class="navbar__books-media" href="./books-&-media.html"
-				alt="Literature and films about Dune" id="navBar">Books & Media
-			</a>
-			<a class="navbar__lore" href="./histories-&-lore.html"
-				alt="Histories and lore about Dune"
-				id="navBar">Histories & Lore
-			</a>
-		</nav>
-	
-		<button class="planet">Planets</button>
-		<div class="planet__container"></div>
-
-		<button class="character">Characters</button>
-		<div class="character__container"></div> 
-
-		<button class="house">Houses</button>
-		<div class="house__container"></div> 
-
-		<button class="organization">Organizations and Groups</button>
-		<div class="organization__container"></div>   
-	</section>
+	<nav class="navbar">
+		<a class="navbar__title" href="./index.html"
+			alt="Main title - Link to main page">Dune	
+		</a>
+		<a class="navbar__books-media" href="./books-&-media.html"
+			alt="Literature and films about Dune" id="navBar">Books & Media
+		</a>
+		<a class="navbar__lore" href="./histories-&-lore.html"
+			alt="Histories and lore about Dune"
+			id="navBar">Histories & Lore
+		</a>
+	</nav>
+	<main class="grid">
+		<section class="sidebar">
+			<button class="planet" alt="Planets of Dune">Planets</button>
+			<button class="character" alt="Characters of Dune">Characters</button>
+			<button class="house" alt="Houses of Dune">Houses</button>
+			<button class="organization" alt="Organizations and Groups of Dune">
+				Organizations and Groups</button> 
+			<div class="sidebar__tab-buttons"></div>
+		</section>
+		<section class="containers">
+			<div class="planet__container"></div>
+			<div class="character__container"></div> 
+			<div class="house__container"></div> 
+			<div class="organization__container"></div>
+		</section>
+	</main>
 	<div class="lore-bg"></div>
 </body>
 </html>
