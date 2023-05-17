@@ -3,7 +3,7 @@ export default function tabs() {
 	let planetTabBtns = document.querySelectorAll('.sidebar__planet-buttons');
 	let planetContent = document.querySelectorAll('.content__planet-info');
 
-	planetTabBtns.forEach((tab, index) => {
+	planetTabBtns.forEach((tab) => {
 		tab.addEventListener('click', () => {
 			planetContent.forEach(content => {
 				content.classList.remove('active');
@@ -11,8 +11,8 @@ export default function tabs() {
 			planetTabBtns.forEach((tab) => {
 				tab.classList.remove('active');
 			});
-			planetContent[index].classList.add('active');
-			planetTabBtns[index].classList.add('active');
+			tab.planetContent.classList.add('active');
+			tab.planetTabBtns.classList.add('active');
 			}); 
 	});
 
