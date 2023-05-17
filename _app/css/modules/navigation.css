@@ -1,14 +1,12 @@
 .navbar {
 	font: var(--font-header-text);
-	position: relative;
+	position: sticky;
 	bottom: 0;
 	left: 0;
 	display: flex;
 	justify-content: space-between;
 	padding: .5rem;
 	width: 80%;
-	/* grid-area: nav; */
-	grid-column: 1 / 2;
 	align-items: center;
 }
 
@@ -52,5 +50,36 @@
 		left: 0px;
 		filter: blur(0px);
 		opacity: 1;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.navbar__title {
+		font-size: 1.3rem;
+	}
+	
+	.navbar__books-media,
+	.navbar__lore {
+		font-size: .5rem;
+	}
+
+	.navbar {
+		width: 60%;
+		padding: .2rem;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar__title {
+		font-size: 2.5rem;
+	}
+	
+	.navbar__books-media,
+	.navbar__lore {
+		font-size: 1rem;
+	}
+
+	.navbar {
+		width: 80%;
 	}
 }

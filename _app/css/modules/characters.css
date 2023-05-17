@@ -1,68 +1,100 @@
-.character {
-	background-color: var(--first-color);
+.sidebar__characters {
 	padding: 10px;
-	border: none;
 	text-align: left;
-	outline: none;
-	font-size: 15px;
-	grid-area: tab2;
-}
-
-.character__container {
-	align-items: flex-start;
+	border: none;
+	font-size: .5rem;
+	grid-column: 1 / 2;
 	width: 100%;
-	grid-column: 1 / 4;
-	grid-area: container2;
+	padding: .5rem;
 }
 
-.character__button {
-	background-color: #eee;
-	padding: 10px;
-	border: none;
-	outline: none;
+.content__characters {
+	grid-column: 1 / 2;
+	color: var(--first-color);
+}
+
+.sidebar__character-buttons {
+	width: 100%;
+	background-color: var(--third-color);
+	color: var(--first-color);
+	padding: .5rem;
+	border: none;		
 	text-align: left;
-	font-size: 15px;
+	font-size: .5rem;
 	position: relative;
-	width: 100%;
-	grid-area: container-tab2;
+	overflow: hidden;
 }
 
-.character__button::after {
-	position: absolute;
-}
-
-.character:hover,
-.character__button:hover {
-	background-color: var(--highlight-color);
-}
-
-.character__info {
+.content__character-info {
 	padding: 0 1rem 0 1rem;
-	background-color: #f1f1f1;
 	display: none;
-	grid-area: dune-content;
 }
 
-.active {
+.content__character-info .active {
+	grid-column: 2 / 4;
 	display: block;
-	grid-area: dune-content;
 }
 
-.character__image-frame {
+.content__character-imgbox {
 	overflow: hidden; 
 	width: 50%;
 	padding: 1rem;
 	float: right;
 	margin: 1rem 0 0 0;
+	border-radius: .2rem;
 }
 
-.character__image {
+.content__character-img {
 	height: fit-content;
 	object-fit: cover;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+	border-radius: .2rem;
 }
 
-.character__text {
+.content__character-text {
 	font: var(--font-body-text);
 	margin-top: 1rem;
+	padding: 1rem;
+	font-size: .5rem;
+}
+
+.sidebar__character-buttons::after {
+	position: absolute;
+}
+
+.sidebar__characters:hover,
+.sidebar__character-buttons:hover {
+	background-color: var(--highlight-color);
+}
+
+@media only screen and (max-width: 1200px) {
+	.sidebar__characters {
+		font-size: .8rem;
+	}
+
+	.sidebar__character-buttons {
+		font-size: .8rem;
+	}
+
+	.content__character-text {
+		font-size: .8rem;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.sidebar__characters {
+		font-size: 1.2rem;
+	}
+
+	.sidebar__character-buttons {
+		font-size: 1.2rem;
+	}
+
+	.content__character-imgbox {
+		width: 100%;
+	}
+
+	.content__character-text {
+		font-size: 1.5rem;
+	}
 }

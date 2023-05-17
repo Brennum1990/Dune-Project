@@ -1,69 +1,100 @@
-.planet {
+.sidebar__planets {
 	padding: 10px;
-	border: none;
 	text-align: left;
-	font-size: 15px;
+	border: none;
+	font-size: .5rem;
 	grid-column: 1 / 2;
 	width: 100%;
+	padding: .5rem;
 }
 
-.planet__container {
+.content__planets {
 	grid-column: 1 / 2;
-	background-color: beige;
+	color: var(--first-color);
 }
 
-.planet__button {
+.sidebar__planet-buttons {
 	width: 100%;
 	background-color: var(--third-color);
 	color: var(--first-color);
-	padding: 10px;
+	padding: .5rem;
 	border: none;		
 	text-align: left;
-	font-size: 15px;
+	font-size: .5rem;
 	position: relative;
 	overflow: hidden;
 }
 
-.planet__info {
+.content__planet-info {
 	padding: 0 1rem 0 1rem;
 	display: none;
 }
 
-.active {
+.content__planet-info .active {
 	grid-column: 2 / 4;
-	display: inline-block;
+	display: block;
 }
 
-.planet__image-frame {
+.content__planet-imgbox {
 	overflow: hidden; 
 	width: 50%;
 	padding: 1rem;
 	float: right;
 	margin: 1rem 0 0 0;
+	border-radius: .2rem;
 }
 
-.planet__image {
+.content__planet-img {
 	height: fit-content;
 	object-fit: cover;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+	border-radius: .2rem;
 }
 
-.planet__text {
+.content__planet-text {
 	font: var(--font-body-text);
 	margin-top: 1rem;
+	padding: 1rem;
+	font-size: .5rem;
 }
 
-.planet__button::after {
+.sidebar__planet-buttons::after {
 	position: absolute;
 }
 
-.planet:hover,
-.planet__button:hover {
+.sidebar__planets:hover,
+.sidebar__planet-buttons:hover {
 	background-color: var(--highlight-color);
 }
 
-.content {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+@media only screen and (max-width: 1200px) {
+	.sidebar__planets {
+		font-size: .8rem;
+	}
 
+	.sidebar__planet-buttons {
+		font-size: .8rem;
+	}
+
+	.content__planet-text {
+		font-size: .8rem;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.sidebar__planets {
+		font-size: 1.2rem;
+	}
+
+	.sidebar__planet-buttons {
+		font-size: 1.2rem;
+	}
+
+	.content__planet-imgbox {
+		width: 100%;
+	}
+
+	.content__planet-text {
+		font-size: 1.5rem;
+	}
 }
