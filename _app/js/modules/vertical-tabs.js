@@ -1,7 +1,7 @@
 export default function tabs() {
 
-	let planetTabBtns = document.querySelectorAll('.planet__button');
-	let planetContent = document.querySelectorAll('.planet__info');
+	let planetTabBtns = document.querySelectorAll('.sidebar__planet-buttons');
+	let planetContent = document.querySelectorAll('.content__planet-info');
 
 	planetTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
@@ -13,11 +13,11 @@ export default function tabs() {
 			});
 			planetContent[index].classList.add('active');
 			planetTabBtns[index].classList.add('active');
-		}); 
+			}); 
 	});
 
-	let characterTabBtns = document.querySelectorAll('.character__button');
-	let characterContent = document.querySelectorAll('.character__info');
+	let characterTabBtns = document.querySelectorAll('.sidebar__character-buttons');
+	let characterContent = document.querySelectorAll('.content__character-info');
 
 	characterTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
@@ -32,8 +32,8 @@ export default function tabs() {
 		}); 
 	});
 
-	let houseTabBtns = document.querySelectorAll('.house__button');
-	let houseContent = document.querySelectorAll('.house__info');
+	let houseTabBtns = document.querySelectorAll('.sidebar__house-buttons');
+	let houseContent = document.querySelectorAll('.content__house-info');
 
 	houseTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
@@ -48,8 +48,8 @@ export default function tabs() {
 		}); 
 	});
 
-	let groupTabBtns = document.querySelectorAll('.organization__button');
-	let groupContent = document.querySelectorAll('.organization__info');
+	let groupTabBtns = document.querySelectorAll('.sidebar__organization-buttons');
+	let groupContent = document.querySelectorAll('.content__organization-info');
 
 	groupTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {

@@ -2,7 +2,7 @@ import {sanity} from '../sanity.js';
 import collapsible from './vertical-tabs.js';
 
 export default async function onScreen() {
-	const onscreenContainer = document.querySelector('.onscreen');
+	const onscreenContainer = document.querySelector('.media__content');
 	const query = `*[_type == 'onscreen'] | order(releaseDate asc) {
 		_id,
 		name,
@@ -19,7 +19,7 @@ export default async function onScreen() {
 		for (const onscreen of media) {
 			// Creating elements
 			const onscreenCard = document.createElement('div');
-			const onscreenButton = document.createElement('button');
+			const onscreenTitle = document.createElement('h1');
 			const onscreenInfo = document.createElement('div');
 			const onscreenImageFrame = document.createElement('div');
 			const onscreenImage = document.createElement('img'); 
@@ -27,7 +27,7 @@ export default async function onScreen() {
 			const onscreenReleaseDate = document.createElement('p');
 			
 			// Rendering elements 
-			onscreenButton.innerText = onscreen.name;
+			onscreenTitle.innerText = onscreen.name;
 			onscreenImage.src = onscreen.imageUrl;
 			onscreenImage.setAttribute('alt', `${onscreen.name}`);
 			onscreenText.innerText = onscreen.text; 
@@ -35,7 +35,7 @@ export default async function onScreen() {
 		
 			// Hierarchy of onscreen details
 			onscreenContainer.appendChild(onscreenCard);
-			onscreenCard.appendChild(onscreenButton);
+			onscreenCard.appendChild(onscreenTitle);
 			onscreenCard.appendChild(onscreenInfo);
 				onscreenInfo.appendChild(onscreenImageFrame);
 					onscreenImageFrame.appendChild(onscreenImage);
@@ -43,7 +43,7 @@ export default async function onScreen() {
 			
 			// Creating classnames
 			onscreenCard.className = 'onscreen__card';
-			onscreenButton.className = 'onscreen__button';
+			onscreenTitle.className = 'onscreen__button';
 			onscreenInfo.className = 'onscreen__info';
 			onscreenImageFrame.className = 'onscreen__image-frame';
 			onscreenImage.className = 'onscreen__image';

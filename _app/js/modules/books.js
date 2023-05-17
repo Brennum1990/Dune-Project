@@ -2,7 +2,7 @@ import {sanity} from '../sanity.js';
 import collapsible from './vertical-tabs.js';
 
 export default async function books() {
-	const bookContainer = document.querySelector('.book');
+	const bookContainer = document.querySelector('.books__content');
 	const query = `*[_type == 'books'] | order(releaseDate asc) {
 		_id,
 		name,
@@ -19,7 +19,7 @@ export default async function books() {
 		for (const books of dune) {
 			// Creating elements
 			const bookCard = document.createElement('div');
-			const bookButton = document.createElement('button');
+			const bookTitle = document.createElement('h1');
 			const bookInfo = document.createElement('div');
 			const bookImageFrame = document.createElement('div');
 			const bookImage = document.createElement('img'); 
@@ -27,7 +27,7 @@ export default async function books() {
 			const bookReleaseDate = document.createElement('p');
 			
 			// Rendering elements 
-			bookButton.innerText = books.name;
+			bookTitle.innerText = books.name;
 			bookImage.src = books.imageUrl;
 			bookImage.setAttribute('alt', `${books.name}`);
 			bookText.innerText = books.text; 
@@ -35,21 +35,20 @@ export default async function books() {
 		
 			// Hierarchy of book details
 			bookContainer.appendChild(bookCard);
-			bookCard.appendChild(bookButton);
+			bookCard.appendChild(bookTitle);
 			bookCard.appendChild(bookInfo);
 				bookInfo.appendChild(bookImageFrame);
 					bookImageFrame.appendChild(bookImage);
 				bookInfo.appendChild(bookText);
 			
 			// Creating classnames
-			bookCard.className = 'book__card';
-			bookButton.className = 'book__button';
-			bookInfo.className = 'book__info';
-			bookImageFrame.className = 'book__image-frame';
-			bookImage.className = 'book__image';
-			bookText.className = 'book__text';
+			bookCard.className = 'books__card';
+			bookTitle.className = 'books__title';
+			bookInfo.className = 'books__info';
+			bookImageFrame.className = 'books__image-frame';
+			bookImage.className = 'books__image';
+			bookText.className = 'books__text';
 		}
 	}
 renderBooks(); 
-collapsible();
 }

@@ -2,13 +2,13 @@ import {sanity} from '../sanity.js';
 import tabs from './vertical-tabs.js';
 
 export default async function planets() {
-	const planetContainer = document.querySelector('.planet__container');
+	const planetContainer = document.querySelector('.content__planets');
 	const querySidebar = `*[_type == 'planets'] | order(name asc) {
 		_id,
 		name,
 	}`;
 
-	const planetName = document.querySelector('.sidebar__tab-buttons');
+	const planetSidebar = document.querySelector('.sidebar__tab-buttons1');
 	const queryContent = `*[_type == 'planets'] | order(name asc) {
 		name,
 		"imageUrl": image.asset->url,
@@ -16,39 +16,38 @@ export default async function planets() {
 		category,
 	}`;
 	
-	const dune1 = await sanity.fetch(querySidebar); 
-		console.log(dune1)
+	const sidebarContent = await sanity.fetch(querySidebar); 
+		console.log(sidebarContent)
 
-	function renderPlanets() {
-		for (const planets of dune1) {
+	function renderSidebar() {
+		for (const planets of sidebarContent) {
 			// Creating elements
 			const planetButton = document.createElement('button');
 			
+			// Rendering elements 
 			planetButton.innerText = planets.name;
 			planetButton.setAttribute('alt', `${planets.name}`);
 			planetButton.setAttribute('type', 'tabs');
 
 			// Hierarchy of planet details
-			planetName.appendChild(planetButton);
+			planetSidebar.appendChild(planetButton);
 	
 			// Creating classnames
-			planetButton.className = 'planet__button';
+			planetButton.className = 'sidebar__planet-buttons';
 		}
 	}
-renderPlanets(); 
+renderSidebar(); 
 tabs();
 
-	const dune2 = await sanity.fetch(queryContent); 
-	console.log(dune2)
+	const mainContent = await sanity.fetch(queryContent); 
+	console.log(mainContent)
 
 	function renderContent() {
-		for (const planets of dune2) {
+		for (const planets of mainContent) {
 			const planetInfo = document.createElement('div');
 			const planetImageFrame = document.createElement('div');
 			const planetImage = document.createElement('img'); 
 			const planetText = document.createElement('p');
-
-			// Rendering elements 
 
 			planetImage.src = planets.imageUrl;
 			planetImage.setAttribute('alt', `${planets.name}`);
@@ -59,12 +58,11 @@ tabs();
 					planetImageFrame.appendChild(planetImage);
 				planetInfo.appendChild(planetText);
 
-			planetInfo.className = 'planet__info';
-			planetImageFrame.className = 'planet__image-frame';
-			planetImage.className = 'planet__image';
-			planetText.className = 'planet__text'; 
+			planetInfo.className = 'content__planet-info';
+			planetImageFrame.className = 'content__planet-imgbox';
+			planetImage.className = 'content__planet-img';
+			planetText.className = 'content__planet-text'; 
 		}
 	}
 renderContent(); 
-tabs();
 }
