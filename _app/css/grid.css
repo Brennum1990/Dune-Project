@@ -1,3 +1,5 @@
+/* Histories & Lore  */
+
 .grid {
 	width: 100vw;
 	height: fit-content;
@@ -8,8 +10,32 @@
 
 .sidebar {
 	grid-column: 1 / 4;
+	background-color: rgb(54, 54, 54);
+	height: 100vh;
 }
 
-.containers {
+.content {
 	grid-column: 4 / 13;
+}
+
+/* Books & Media */
+
+.gridula {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+	.sidebar {
+		grid-column: 1 / 5;
+	}
+
+	.content {
+		grid-column: 5 / 13;
+	}
 }
