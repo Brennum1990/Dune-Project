@@ -12,23 +12,23 @@
 
 .navbar__title {
 	font-size: 2rem;
-	color: var(--first-color);
+	color: var(--highlight-color);
 	text-decoration: none;
 	margin: 0 .5rem .25rem .5rem;
 }
 
 .navbar__books-media,
 .navbar__lore {
-	color: var(--first-color);
+	color: var(--highlight-color);
 	text-decoration: none;
 	opacity:0;
-	animation:fade 1.5s ease-in-out forwards;
+	animation:fade 1s ease-in-out forwards;
 }
 
 .navbar__title:hover,
 .navbar__books-media:hover,
 .navbar__lore:hover {
-	color: var(--highlight-color);
+	color: var(--first-color);
 	transform: scale(1.05);
 	transition: all 0.2s ease-in-out;
 	transition-delay: 0.1s;
@@ -42,6 +42,8 @@
 		opacity: 0;
 	}
 	50% {
+		top: 5px;
+		left: 5px;
 		filter: blur(5px);
 		opacity: 0.8;
 	}

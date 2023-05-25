@@ -6,6 +6,7 @@
 	grid-column: 1 / 2;
 	width: 100%;
 	padding: .5rem;
+	border-radius: .2rem .2rem 0 0;
 }
 
 .content__planets {
@@ -25,8 +26,12 @@
 	overflow: hidden;
 }
 
+.content__planet-name {
+	padding: .5rem;
+}
+
 .content__planet-info {
-	padding: 0 1rem 0 1rem;
+	padding: 0 0 0 1rem;
 	display: none;
 }
 
@@ -40,7 +45,6 @@
 	width: 50%;
 	padding: 1rem;
 	float: right;
-	margin: 1rem 0 0 0;
 	border-radius: .2rem;
 }
 
@@ -53,7 +57,6 @@
 
 .content__planet-text {
 	font: var(--font-body-text);
-	margin-top: 1rem;
 	padding: 1rem;
 	font-size: .5rem;
 }
@@ -62,9 +65,12 @@
 	position: absolute;
 }
 
-.sidebar__planets:hover,
-.sidebar__planet-buttons:hover {
+.sidebar__planets:hover {
 	background-color: var(--highlight-color);
+}
+
+.sidebar__planet-buttons:hover {
+	background-color: var(--highlight-secondary-color);
 }
 
 @media only screen and (max-width: 1200px) {

@@ -25,8 +25,16 @@
 	overflow: hidden;
 }
 
+.sidebar__organization-buttons:last-child {
+	border-radius: 0 0 .2rem .2rem;
+}
+
+.content__organization-name {
+	padding: .5rem;
+}
+
 .content__organization-info {
-	padding: 0 1rem 0 1rem;
+	padding: 0 0 0 1rem;
 	display: none;
 }
 
@@ -40,7 +48,6 @@
 	width: 50%;
 	padding: 1rem;
 	float: right;
-	margin: 1rem 0 0 0;
 	border-radius: .2rem;
 }
 
@@ -53,7 +60,6 @@
 
 .content__organization-text {
 	font: var(--font-body-text);
-	margin-top: 1rem;
 	padding: 1rem;
 	font-size: .5rem;
 }
@@ -62,9 +68,12 @@
 	position: absolute;
 }
 
-.sidebar__organizations:hover,
-.sidebar__organization-buttons:hover {
+.sidebar__organizations:hover {
 	background-color: var(--highlight-color);
+}
+
+.sidebar__organization-buttons:hover {
+	background-color: var(--highlight-secondary-color);
 }
 
 @media only screen and (max-width: 1200px) {
