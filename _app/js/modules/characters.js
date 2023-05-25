@@ -44,20 +44,24 @@ tabs();
 
 	function renderContent() {
 		for (const characters of mainContent) {
+			const characterName = document.createElement('h1');
 			const characterInfo = document.createElement('div');
 			const characterImageFrame = document.createElement('div');
 			const characterImage = document.createElement('img'); 
 			const characterText = document.createElement('p');
 
+			characterName.innerText = characters.name; 
 			characterImage.src = characters.imageUrl;
 			characterImage.setAttribute('alt', `${characters.name}`);
 			characterText.innerText = characters.text; 
 
 			characterContainer.appendChild(characterInfo);
+				characterInfo.appendChild(characterName);
 				characterInfo.appendChild(characterImageFrame);
 					characterImageFrame.appendChild(characterImage);
 				characterInfo.appendChild(characterText);
 
+			characterName.className = 'content__character-name';
 			characterInfo.className = 'content__character-info';
 			characterImageFrame.className = 'content__character-imgbox';
 			characterImage.className = 'content__character-img';

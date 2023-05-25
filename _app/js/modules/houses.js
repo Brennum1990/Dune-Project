@@ -44,20 +44,24 @@ tabs();
 
 	function renderContent() {
 		for (const houses of mainContent) {
+			const houseName = document.createElement('h1');
 			const houseInfo = document.createElement('div');
 			const houseImageFrame = document.createElement('div');
 			const houseImage = document.createElement('img'); 
 			const houseText = document.createElement('p');
 
+			houseName.innerText = houses.name; 
 			houseImage.src = houses.imageUrl;
 			houseImage.setAttribute('alt', `${houses.name}`);
 			houseText.innerText = houses.text; 
 
 			houseContainer.appendChild(houseInfo);
+				houseInfo.appendChild(houseName);
 				houseInfo.appendChild(houseImageFrame);
 					houseImageFrame.appendChild(houseImage);
 				houseInfo.appendChild(houseText);
 
+			houseName.className = 'content__house-name';
 			houseInfo.className = 'content__house-info';
 			houseImageFrame.className = 'content__house-imgbox';
 			houseImage.className = 'content__house-img';

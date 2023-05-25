@@ -44,20 +44,24 @@ tabs();
 
 	function renderContent() {
 		for (const planets of mainContent) {
+			const planetName = document.createElement('h1');
 			const planetInfo = document.createElement('div');
 			const planetImageFrame = document.createElement('div');
 			const planetImage = document.createElement('img'); 
 			const planetText = document.createElement('p');
 
+			planetName.innerText = planets.name; 
 			planetImage.src = planets.imageUrl;
 			planetImage.setAttribute('alt', `${planets.name}`);
 			planetText.innerText = planets.text; 
 
 			planetContainer.appendChild(planetInfo);
+				planetInfo.appendChild(planetName);
 				planetInfo.appendChild(planetImageFrame);
 					planetImageFrame.appendChild(planetImage);
 				planetInfo.appendChild(planetText);
 
+			planetName.className = 'content__planet-name';
 			planetInfo.className = 'content__planet-info';
 			planetImageFrame.className = 'content__planet-imgbox';
 			planetImage.className = 'content__planet-img';
@@ -65,4 +69,5 @@ tabs();
 		}
 	}
 renderContent(); 
+tabs();
 }

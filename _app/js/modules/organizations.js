@@ -40,24 +40,28 @@ renderSidebar();
 tabs();
 
 	const mainContent = await sanity.fetch(queryContent); 
-	console.log(mainContent)
+		console.log(mainContent)
 
 	function renderContent() {
 		for (const organization of mainContent) {
+			const organizationName = document.createElement('h1');
 			const organizationInfo = document.createElement('div');
 			const organizationImageFrame = document.createElement('div');
 			const organizationImage = document.createElement('img'); 
 			const organizationText = document.createElement('p');
 
+			organizationName.innerText = organization.name; 
 			organizationImage.src = organization.imageUrl;
 			organizationImage.setAttribute('alt', `${organization.name}`);
 			organizationText.innerText = organization.text; 
 
 			organizationContainer.appendChild(organizationInfo);
+				organizationInfo.appendChild(organizationName);
 				organizationInfo.appendChild(organizationImageFrame);
 					organizationImageFrame.appendChild(organizationImage);
 				organizationInfo.appendChild(organizationText);
 
+			organizationName.className = 'content__organization-name';
 			organizationInfo.className = 'content__organization-info';
 			organizationImageFrame.className = 'content__organization-imgbox';
 			organizationImage.className = 'content__organization-img';
