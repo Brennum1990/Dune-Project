@@ -2,17 +2,16 @@
 	/* Colors */
 	--first-color: #FFFFFF;
 	--second-color: #000000;
-	--third-color: #3E465D;
-	--fourth-color: ;
+	--third-color: #868690;
 	--highlight-color: #b0cbf5;
-	--highlight-secondary-color: #4682e2;
+	--highlight-secondary-color: #3F66C3;
 
 	/* Fonts */
 	--font-header-text: 1rem 'Dune Rise'; 
 	--font-body-text: 1rem 'Doppio One'; 
 
 	/* Grid */
-	--gap-column: 1rem;
-	--gap-row: 1rem;
-	--gap-section: 2rem;
+	--gap-column: .5rem;
+	--gap-row: .5rem;
+	--gap-section: 1rem;
 }
