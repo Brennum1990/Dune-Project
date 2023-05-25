@@ -9,6 +9,11 @@ export default {
 			type: 'string'
 		},
 		{
+			title: 'Author',
+			name: 'author',
+			type: 'string'
+		},
+		{
 			title: 'Release date',
 			name: 'releaseDate',
 			type: 'date',

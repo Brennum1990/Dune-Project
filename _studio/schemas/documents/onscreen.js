@@ -9,6 +9,11 @@ export default {
 			type: 'string'
 		},
 		{
+			title: 'Director',
+			name: 'director',
+			type: 'string'
+		},
+		{
 			title: 'Release date',
 			name: 'releaseDate',
 			type: 'date',

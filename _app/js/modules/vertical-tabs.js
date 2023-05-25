@@ -1,9 +1,10 @@
 export default function tabs() {
+	
+	// Planets
+	const planetTabBtns = document.querySelectorAll('.sidebar__planet-buttons');
+	const planetContent = document.querySelectorAll('.content__planet-info');
 
-	let planetTabBtns = document.querySelectorAll('.sidebar__planet-buttons');
-	let planetContent = document.querySelectorAll('.content__planet-info');
-
-	planetTabBtns.forEach((tab) => {
+	planetTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
 			planetContent.forEach(content => {
 				content.classList.remove('active');
@@ -11,13 +12,14 @@ export default function tabs() {
 			planetTabBtns.forEach((tab) => {
 				tab.classList.remove('active');
 			});
-			tab.planetContent.classList.add('active');
-			tab.planetTabBtns.classList.add('active');
-			}); 
+			planetContent[index].classList.add('active');
+			planetTabBtns[index].classList.add('active');
+		}); 
 	});
 
-	let characterTabBtns = document.querySelectorAll('.sidebar__character-buttons');
-	let characterContent = document.querySelectorAll('.content__character-info');
+	// Characters
+	const characterTabBtns = document.querySelectorAll('.sidebar__character-buttons');
+	const characterContent = document.querySelectorAll('.content__character-info');
 
 	characterTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
@@ -32,8 +34,9 @@ export default function tabs() {
 		}); 
 	});
 
-	let houseTabBtns = document.querySelectorAll('.sidebar__house-buttons');
-	let houseContent = document.querySelectorAll('.content__house-info');
+	// Houses
+	const houseTabBtns = document.querySelectorAll('.sidebar__house-buttons');
+	const houseContent = document.querySelectorAll('.content__house-info');
 
 	houseTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
@@ -48,42 +51,54 @@ export default function tabs() {
 		}); 
 	});
 
-	let groupTabBtns = document.querySelectorAll('.sidebar__organization-buttons');
-	let groupContent = document.querySelectorAll('.content__organization-info');
+	// Organizations & Groups
+	const organizationTabBtns = document.querySelectorAll('.sidebar__organization-buttons');
+	const organizationContent = document.querySelectorAll('.content__organization-info');
 
-	groupTabBtns.forEach((tab, index) => {
+	organizationTabBtns.forEach((tab, index) => {
 		tab.addEventListener('click', () => {
-			groupContent.forEach(content => {
+			organizationContent.forEach(content => {
 				content.classList.remove('active');
 			});
-			groupTabBtns.forEach((tab) => {
+			organizationTabBtns.forEach((tab) => {
 				tab.classList.remove('active');
 			});
-			groupContent[index].classList.add('active');
-			groupTabBtns[index].classList.add('active');
+			organizationContent[index].classList.add('active');
+			organizationTabBtns[index].classList.add('active');
 		}); 
 	});
 
-	// Characters
-	// const characterButtons = document.querySelectorAll(".character__button");
+	// Books
+	const bookCards = document.querySelectorAll('.books__card');
+	const bookInfo = document.querySelectorAll('.books__info');
 
-	// characterButtons.forEach(characterButton => {
-	// characterButton.addEventListener("click", event => {
-		
-	// const currentlyActivecharacterButton = document.querySelector(".character__button.active");
-	// 	if(currentlyActivecharacterButton && currentlyActivecharacterButton!==characterButton) {
-	// 		currentlyActivecharacterButton.classList.toggle("active");
-	// 		currentlyActivecharacterButton.nextElementSibling.style.maxHeight = 0;
-	// }
+	bookCards.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			bookInfo.forEach(content => {
+				content.classList.remove('active');
+			});
+			bookCards.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			bookInfo[index].classList.add('active');
+			bookCards[index].classList.add('active');
+		}); 
+	});
 
-	// characterButton.classList.toggle("active");
-	// const characterInfo = characterButton.nextElementSibling;
-	// if(characterButton.classList.contains("active")) {
-	// 	characterInfo.style.maxHeight = characterInfo.scrollHeight + "px";
-	// }
-	// else {
-	// 	characterInfo.style.maxHeight = 0;
-	// }
-	// });
-	// });
+	// Media - TV/ Films
+	const onScreenTabBtns = document.querySelectorAll('.onscreen__card');
+	const onScreenContent = document.querySelectorAll('.onscreen__info');
+
+	onScreenTabBtns.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			onScreenContent.forEach(content => {
+				content.classList.remove('active');
+			});
+			onScreenTabBtns.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			onScreenContent[index].classList.add('active');
+			onScreenTabBtns[index].classList.add('active');
+		}); 
+	});
 }
