@@ -44,11 +44,10 @@
 	width: 50%;
 	padding: 1rem;
 	float: right;
-	border-radius: .2rem;
 }
 
-.content__house-img {
-	height: fit-content;
+.content__house-imgbox img {
+	height: 100%;
 	object-fit: cover;
 	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 	border-radius: .2rem;

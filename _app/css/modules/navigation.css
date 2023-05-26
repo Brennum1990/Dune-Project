@@ -1,4 +1,6 @@
 .navbar {
+	width: 100%;
+	height: 5vh;
 	font: var(--font-header-text);
 	position: sticky;
 	bottom: 0;
@@ -6,8 +8,8 @@
 	display: flex;
 	justify-content: space-between;
 	padding: .5rem;
-	width: 80%;
 	align-items: center;
+	background-color: var(--second-color);
 }
 
 .navbar__title {
@@ -66,7 +68,6 @@
 	}
 
 	.navbar {
-		width: 60%;
 		padding: .2rem;
 	}
 }
@@ -79,9 +80,5 @@
 	.navbar__books-media,
 	.navbar__lore {
 		font-size: 1rem;
-	}
-
-	.navbar {
-		width: 80%;
 	}
 }

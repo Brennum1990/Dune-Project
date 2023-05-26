@@ -14,7 +14,7 @@ img {
 	width: 100%;
 }
 
-button, select {
+button, select, a {
 	cursor: pointer;
 	font: var(--font-header-text);
 }

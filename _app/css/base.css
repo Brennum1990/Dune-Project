@@ -3,7 +3,7 @@ html {
 }
 
 .bg {
-	background-image: url(../assets/dune-images/Background/Dune_background_09.jpeg);
+	background-image: url(../assets/dune-images/Background/Dune_background_03.jpeg);
 	height: 100vh;
 	width: 100vw;
 	background-position: center;	
@@ -34,7 +34,7 @@ html {
 	background-position: center;	
 	background-repeat: no-repeat;
 	background-size: cover;
-	background: linear-gradient(90deg, #a90000, #cd8653);
+	background: linear-gradient(90deg, #5C6269, #3E465D);
 	position: fixed;
 	z-index: -1;
 	top: 0;
