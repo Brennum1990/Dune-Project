@@ -5,6 +5,7 @@
 @import './fonts.css';
 
 @import './modules/navigation.css';
+@import './modules/footer.css';
 
 @import './modules/planets.css';
 @import './modules/characters.css';

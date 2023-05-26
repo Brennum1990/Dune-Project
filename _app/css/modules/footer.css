@@ -1,0 +1,12 @@
+.footer {
+	width: 100%;
+	height: 5vh;
+	background-color: var(--second-color);
+	position: absolute;
+	display: flex;
+	bottom: 0;
+}
+
+.footer__about-us {
+	color: var(--first-color);
+}
