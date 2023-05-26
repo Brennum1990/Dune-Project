@@ -40,7 +40,7 @@ renderSidebar();
 tabs();
 
 	const mainContent = await sanity.fetch(queryContent); 
-		console.log(mainContent)
+	console.log(mainContent)
 
 	function renderContent() {
 		for (const organization of mainContent) {

@@ -1,12 +1,12 @@
 import {sanity} from '../sanity.js';
-import tabs from './vertical-tabs.js';
+import showMedia from './show-media.js';
 
 export default async function onScreen() {
 	const onscreenContainer = document.querySelector('.onscreen__content');
 	const onscreenQuery = `*[_type == 'onscreen'] | order(releaseDate asc) {
 		_id,
 		name,
-		director,
+		author,
 		releaseDate,
 		"imageUrl": image.asset->url,
 		text,
@@ -14,50 +14,53 @@ export default async function onScreen() {
 	}`;
 
 	const media = await sanity.fetch(onscreenQuery); 
-		console.log(media)
 
 	function renderOnScreen() {
 		for (const onscreen of media) {
 			// Creating elements
 			const onscreenCard = document.createElement('a');
-			const onscreenTitle = document.createElement('h1');
+			const onscreenImageFrame = document.createElement('div');
+			const onscreenImage = document.createElement('img');
+			 
 			const onscreenInfo = document.createElement('div');
-			const onscreenImageFrame = document.createElement('a');
-			const onscreenImage = document.createElement('img'); 
+			const onscreenDetails = document.createElement('div');
+			const onscreenTitle = document.createElement('h1');
 			const onscreenText = document.createElement('p');
 			const onscreenReleaseDate = document.createElement('p');
-			const onscreenDirector = document.createElement('p');
+			const onscreenAuthor = document.createElement('p');
 			
 			// Rendering elements 
 			onscreenTitle.innerText = onscreen.name;
 			onscreenImage.src = onscreen.imageUrl;
-			onscreenImage.setAttribute('alt', `${onscreen.name}`);
+			onscreenCard.setAttribute('alt', `${onscreen.name}`);
 			onscreenText.innerText = onscreen.text; 
 			onscreenReleaseDate.innerText = onscreen.releaseDate;
-			onscreenDirector.innerText = onscreen.director;
+			onscreenAuthor.innerText = onscreen.author;
 		
 			// Hierarchy of onscreen details
 			onscreenContainer.appendChild(onscreenCard);
-				onscreenCard.appendChild(onscreenTitle);
 				onscreenCard.appendChild(onscreenImageFrame);
 					onscreenImageFrame.appendChild(onscreenImage);
 
 			onscreenContainer.appendChild(onscreenInfo);
-				onscreenInfo.appendChild(onscreenDirector);
-				onscreenInfo.appendChild(onscreenReleaseDate);
+				onscreenInfo.appendChild(onscreenDetails);
+					onscreenDetails.appendChild(onscreenTitle);
+					onscreenDetails.appendChild(onscreenAuthor);
+					onscreenDetails.appendChild(onscreenReleaseDate);
 				onscreenInfo.appendChild(onscreenText);
 			
 			// Creating classnames
 			onscreenCard.className = 'onscreen__card';
 			onscreenTitle.className = 'onscreen__title';
-			onscreenDirector.className = 'onscreen__director';
+			onscreenAuthor.className = 'onscreen__author';
 			onscreenReleaseDate.className = 'onscreen__release-date';
 			onscreenInfo.className = 'onscreen__info';
+			onscreenDetails.className = 'onscreen__details';
 			onscreenImageFrame.className = 'onscreen__image-frame';
 			onscreenImage.className = 'onscreen__image';
 			onscreenText.className = 'onscreen__text';
 		}
 	}
 renderOnScreen(); 
-tabs();
+showMedia();
 }
