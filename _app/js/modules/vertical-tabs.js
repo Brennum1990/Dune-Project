@@ -67,38 +67,4 @@ export default function tabs() {
 			organizationTabBtns[index].classList.add('active');
 		}); 
 	});
-
-	// Books
-	const bookCards = document.querySelectorAll('.books__card');
-	const bookInfo = document.querySelectorAll('.books__info');
-
-	bookCards.forEach((tab, index) => {
-		tab.addEventListener('click', () => {
-			bookInfo.forEach(content => {
-				content.classList.remove('active');
-			});
-			bookCards.forEach((tab) => {
-				tab.classList.remove('active');
-			});
-			bookInfo[index].classList.add('active');
-			bookCards[index].classList.add('active');
-		}); 
-	});
-
-	// Media - TV/ Films
-	const onScreenTabBtns = document.querySelectorAll('.onscreen__card');
-	const onScreenContent = document.querySelectorAll('.onscreen__info');
-
-	onScreenTabBtns.forEach((tab, index) => {
-		tab.addEventListener('click', () => {
-			onScreenContent.forEach(content => {
-				content.classList.remove('active');
-			});
-			onScreenTabBtns.forEach((tab) => {
-				tab.classList.remove('active');
-			});
-			onScreenContent[index].classList.add('active');
-			onScreenTabBtns[index].classList.add('active');
-		}); 
-	});
 }

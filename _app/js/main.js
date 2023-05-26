@@ -13,11 +13,14 @@ houses()
 organization()
 onscreen()
 books()
+
 // category()
 
 // Vscode
 import tabs from "./modules/vertical-tabs.js";
 import showHide from "./modules/show-hide.js";
+import showMedia from "./modules/show-media.js";
 
 showHide()
 tabs()
+showMedia()
