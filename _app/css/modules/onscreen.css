@@ -34,6 +34,16 @@
 	cursor: pointer;
 	scroll-snap-align: start;
 	background-color: var(--fourth-color);
+	overflow: hidden; 
+	width: 27vw;
+	height: 41vh; 
+}
+
+.onscreen__card img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: .2rem;
 }
 
 .onscreen__card:hover { 
@@ -44,7 +54,7 @@
 .onscreen__info {
 	display: none;
 	width: 40vw;
-	height: 55vh;
+	height: 41vh;
 	padding: var(--gap-row);
 	background-color: var(--first-color);
 	margin: .5rem 0 .5rem 0;
@@ -54,19 +64,6 @@
 
 .active {
 	display: block;
-}
-
-.onscreen__image-frame {
-	overflow: hidden; 
-	width: 40vw;
-	height: 53.5vh; 
-}
-
-.onscreen__image-frame img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	border-radius: .2rem;
 }
 
 .onscreen__details {
@@ -83,14 +80,14 @@
 	text-align: center;
 }
 
-.onscreen__author,
+.onscreen__director,
 .onscreen__release-date {
 	font: var(--font-body-text);
 	font-size: .8rem;
 }
 
-.onscreen__author::before {
-	content: 'Author: ';
+.onscreen__director::before {
+	content: 'Director: ';
 }
 
 .onscreen__release-date::before {

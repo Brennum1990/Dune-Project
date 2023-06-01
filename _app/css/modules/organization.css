@@ -24,12 +24,8 @@
 	overflow: hidden;
 }
 
-.sidebar__organization-buttons:last-child {
-	border-radius: 0 0 .2rem .2rem;
-}
-
 .content__organization-name {
-	padding: .5rem;
+	padding: .5rem 0 .5rem 0;
 }
 
 .content__organization-info {
@@ -47,6 +43,7 @@
 	width: 50%;
 	padding: 1rem;
 	float: right;
+	border-radius: .2rem;
 }
 
 .content__organization-imgbox img {
@@ -58,8 +55,12 @@
 
 .content__organization-text {
 	font: var(--font-body-text);
-	padding: 1rem;
+	margin-right: 1rem;
 	font-size: .5rem;
+}
+
+.sidebar__organization-buttons:last-child {
+	border-radius: 0 0 .2rem .2rem;
 }
 
 .sidebar__organization-buttons::after {

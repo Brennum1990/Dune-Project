@@ -3,7 +3,6 @@
 	text-align: left;
 	border: none;
 	font-size: .5rem;
-	grid-column: 1 / 2;
 	width: 100%;
 	padding: .5rem;
 }
@@ -26,7 +25,7 @@
 }
 
 .content__house-name {
-	padding: .5rem;
+	padding: .5rem 0 .5rem 0;
 }
 
 .content__house-info {
@@ -44,6 +43,7 @@
 	width: 50%;
 	padding: 1rem;
 	float: right;
+	border-radius: .2rem;
 }
 
 .content__house-imgbox img {
@@ -55,7 +55,7 @@
 
 .content__house-text {
 	font: var(--font-body-text);
-	padding: 1rem;
+	margin-right: 1rem;
 	font-size: .5rem;
 }
 

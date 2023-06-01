@@ -1,17 +1,15 @@
 .books {
 	border: none;
-	font-size: 15px;
 	grid-column: 1 / 13;
 }
 
 .books__button {
 	width: 100%;
 	background-color: var(--first-color);
-	padding: 15px;
 	border: none;
 	text-align: left;
-	font-size: 15px;
 	position: relative;
+	padding: .5rem;
 }
 
 .books__button:hover {
@@ -33,7 +31,17 @@
 	border-radius: .2rem;
 	cursor: pointer;
 	scroll-snap-align: start;
-		background-color: var(--fourth-color);
+	background-color: var(--fourth-color);
+	overflow: hidden; 
+	width: 40vw;
+	height: 60vh; 
+}
+
+.books__card img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: .2rem;
 }
 
 .books__card:hover { 
@@ -44,7 +52,7 @@
 .books__info {
 	display: none;
 	width: 40vw;
-	height: 55vh;
+	height: 62vh;
 	padding: var(--gap-row);
 	background-color: var(--first-color);
 	margin: .5rem 0 .5rem 0;
@@ -54,19 +62,6 @@
 
 .active {
 	display: block;
-}
-
-.books__image-frame {
-	overflow: hidden; 
-	width: 40vw;
-	height: 53.5vh; 
-}
-
-.books__image-frame img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	border-radius: .2rem;
 }
 
 .books__details {
