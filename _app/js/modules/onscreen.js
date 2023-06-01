@@ -6,7 +6,7 @@ export default async function onScreen() {
 	const onscreenQuery = `*[_type == 'onscreen'] | order(releaseDate asc) {
 		_id,
 		name,
-		author,
+		director,
 		releaseDate,
 		"imageUrl": image.asset->url,
 		text,
@@ -19,7 +19,6 @@ export default async function onScreen() {
 		for (const onscreen of media) {
 			// Creating elements
 			const onscreenCard = document.createElement('a');
-			const onscreenImageFrame = document.createElement('div');
 			const onscreenImage = document.createElement('img');
 			 
 			const onscreenInfo = document.createElement('div');
@@ -27,7 +26,7 @@ export default async function onScreen() {
 			const onscreenTitle = document.createElement('h1');
 			const onscreenText = document.createElement('p');
 			const onscreenReleaseDate = document.createElement('p');
-			const onscreenAuthor = document.createElement('p');
+			const onscreenDirector = document.createElement('p');
 			
 			// Rendering elements 
 			onscreenTitle.innerText = onscreen.name;
@@ -35,28 +34,26 @@ export default async function onScreen() {
 			onscreenCard.setAttribute('alt', `${onscreen.name}`);
 			onscreenText.innerText = onscreen.text; 
 			onscreenReleaseDate.innerText = onscreen.releaseDate;
-			onscreenAuthor.innerText = onscreen.author;
+			onscreenDirector.innerText = onscreen.director;
 		
 			// Hierarchy of onscreen details
 			onscreenContainer.appendChild(onscreenCard);
-				onscreenCard.appendChild(onscreenImageFrame);
-					onscreenImageFrame.appendChild(onscreenImage);
+				onscreenCard.appendChild(onscreenImage);
 
 			onscreenContainer.appendChild(onscreenInfo);
 				onscreenInfo.appendChild(onscreenDetails);
 					onscreenDetails.appendChild(onscreenTitle);
-					onscreenDetails.appendChild(onscreenAuthor);
+					onscreenDetails.appendChild(onscreenDirector);
 					onscreenDetails.appendChild(onscreenReleaseDate);
 				onscreenInfo.appendChild(onscreenText);
 			
 			// Creating classnames
 			onscreenCard.className = 'onscreen__card';
 			onscreenTitle.className = 'onscreen__title';
-			onscreenAuthor.className = 'onscreen__author';
+			onscreenDirector.className = 'onscreen__director';
 			onscreenReleaseDate.className = 'onscreen__release-date';
 			onscreenInfo.className = 'onscreen__info';
 			onscreenDetails.className = 'onscreen__details';
-			onscreenImageFrame.className = 'onscreen__image-frame';
 			onscreenImage.className = 'onscreen__image';
 			onscreenText.className = 'onscreen__text';
 		}

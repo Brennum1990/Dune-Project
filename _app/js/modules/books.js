@@ -19,7 +19,6 @@ export default async function books() {
 		for (const books of media) {
 			// Creating elements
 			const bookCard = document.createElement('a');
-			const bookImageFrame = document.createElement('div');
 			const bookImage = document.createElement('img');
 			 
 			const bookInfo = document.createElement('div');
@@ -33,14 +32,14 @@ export default async function books() {
 			bookTitle.innerText = books.name;
 			bookImage.src = books.imageUrl;
 			bookCard.setAttribute('alt', `${books.name}`);
+			bookCard.setAttribute('href', '#');
 			bookText.innerText = books.text; 
 			bookReleaseDate.innerText = books.releaseDate;
 			bookAuthor.innerText = books.author;
 		
 			// Hierarchy of book details
 			bookContainer.appendChild(bookCard);
-				bookCard.appendChild(bookImageFrame);
-					bookImageFrame.appendChild(bookImage);
+				bookCard.appendChild(bookImage);
 
 			bookContainer.appendChild(bookInfo);
 				bookInfo.appendChild(bookDetails);
@@ -51,13 +50,12 @@ export default async function books() {
 			
 			// Creating classnames
 			bookCard.className = 'books__card';
+			bookImage.className = 'books__image';
 			bookTitle.className = 'books__title';
 			bookAuthor.className = 'books__author';
 			bookReleaseDate.className = 'books__release-date';
 			bookInfo.className = 'books__info';
 			bookDetails.className = 'books__details';
-			bookImageFrame.className = 'books__image-frame';
-			bookImage.className = 'books__image';
 			bookText.className = 'books__text';
 		}
 	}

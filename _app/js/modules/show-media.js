@@ -14,7 +14,7 @@ export default function showMedia() {
 			bookInfo[index].classList.add('active');
 			bookCards[index].classList.add('active');
 		}); 
-	});
+	}); // Toggles each book and its information
 
 	// Media - TV/ Films
 	const onScreenCard = document.querySelectorAll('.onscreen__card');
@@ -31,5 +31,34 @@ export default function showMedia() {
 			onscreenInfo[index].classList.add('active');
 			onScreenCard[index].classList.add('active');
 		}); 
-	});
+	}); // Toggles each movie and its information
+
+	// Displays and hides the "Books" section
+	const allBooks = document.querySelector('.books__content');
+	let bookBtnClick = true; 
+
+	let showBooks = function() {
+		if(bookBtnClick) {
+			allBooks.style.display = "grid";
+			bookBtnClick = false;
+		} else {
+		  allBooks.style.display = "none";
+		  bookBtnClick = true; 
+		} 
+	}
+	// bookBtnClick.addEventListener('click', showBooks);
+
+	// Displays and hides the "Onscreen" section
+	// const allMovies = document.querySelector('.onscreen__content');
+	// const movieBtnClick = document.querySelector('.onscreen__button'); 
+	
+	// function showMovies() {
+	// 	if (allMovies.style.display === "none") {
+	// 		allMovies.style.display = "grid";
+	// 	} else {
+	// 	  allMovies.style.display = "none";
+	// 	} 
+	// }
+	// movieBtnClick.addEventListener('click', showMovies);
+	// movieBtnClick.click();
 }
