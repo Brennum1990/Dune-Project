@@ -4,7 +4,7 @@ The site consists of:
 - main page (navbar)
 - books and media (showcase - horizontal view + info)
 	- Books about the Dune universe - 14 in total
-	- Films and TV-miniseries - 6 in total
+	- Films and TV-miniseries - 5 in total
 - histories and lore (sidebar consisting of:
 	- Houses
 	- Characters
@@ -32,7 +32,7 @@ https://www.sanity.io/manage/personal/project/xihmigwe
 
 ## Netlify
 
-
+https://dune-wiki-site.netlify.app/
 
 ## MVP
 
