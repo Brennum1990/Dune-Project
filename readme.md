@@ -1,4 +1,5 @@
 ## Dune wiki page
+
 This website provides the user with information about Frank Herberts abundant sci-fi universe 'Dune'. 
 The site consists of:
 - main page (navbar)
@@ -6,10 +7,10 @@ The site consists of:
 	- Books about the Dune universe - 14 in total
 	- Films and TV-miniseries - 5 in total
 - histories and lore (sidebar consisting of:
-	- Houses
-	- Characters
-	- Planets
-	- Organizations and Groups)
+	- Houses = All the houses Major in the Dune universe
+	- Characters = Main & side characters
+	- Planets = planets.
+	- Organizations and Groups = Armies, companies, religious groups & mercenaries)
 
 ## Tools 
 - HTML
