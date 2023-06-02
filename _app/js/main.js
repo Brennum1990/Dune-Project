@@ -2,7 +2,7 @@
 import planets from "./modules/planets.js";
 import characters from "./modules/characters.js";
 import houses from "./modules/houses.js";
-import organization from "./modules/organizations.js";
+import organizations from "./modules/organizations.js";
 import onscreen from "./modules/onscreen.js";
 import books from "./modules/books.js";
 import category from "./modules/category.js";
@@ -10,7 +10,7 @@ import category from "./modules/category.js";
 planets()
 characters()
 houses()
-organization()
+organizations()
 onscreen()
 books()
 

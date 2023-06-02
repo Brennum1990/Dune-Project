@@ -46,19 +46,4 @@ export default function showMedia() {
 		  bookBtnClick = true; 
 		} 
 	}
-	// bookBtnClick.addEventListener('click', showBooks);
-
-	// Displays and hides the "Onscreen" section
-	// const allMovies = document.querySelector('.onscreen__content');
-	// const movieBtnClick = document.querySelector('.onscreen__button'); 
-	
-	// function showMovies() {
-	// 	if (allMovies.style.display === "none") {
-	// 		allMovies.style.display = "grid";
-	// 	} else {
-	// 	  allMovies.style.display = "none";
-	// 	} 
-	// }
-	// movieBtnClick.addEventListener('click', showMovies);
-	// movieBtnClick.click();
 }
