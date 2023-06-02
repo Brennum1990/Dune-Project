@@ -1,17 +1,17 @@
 .onscreen {
 	border: none;
-	font-size: 15px;
 	grid-column: 1 / 13;
 }
 
 .onscreen__button {
-	width: 100%;
+	width: 50%;
 	background-color: var(--first-color);
-	padding: 15px;
 	border: none;
 	text-align: left;
-	font-size: 15px;
 	position: relative;
+	padding: .5rem;
+	font-size: .5rem;
+	border-radius: 0 1rem 1rem 0;
 }
 
 .onscreen__button:hover {
@@ -25,18 +25,19 @@
 	overflow-x: scroll;
 	scroll-padding: 0;
 	scroll-snap-type: x mandatory;
+	margin: 0 .5rem .5rem .5rem;
 }
 
 .onscreen__card { 
 	margin: .5rem;
-	padding: var(--gap-row);
+	padding: .15rem;
 	border-radius: .2rem;
 	cursor: pointer;
 	scroll-snap-align: start;
 	background-color: var(--fourth-color);
 	overflow: hidden; 
-	width: 27vw;
-	height: 41vh; 
+	width: 20vw;
+	height: 55vh; 
 }
 
 .onscreen__card img {
@@ -53,9 +54,9 @@
 
 .onscreen__info {
 	display: none;
-	width: 40vw;
-	height: 41vh;
-	padding: var(--gap-row);
+	width: 20vw;
+	height: 55vh; 
+	padding: var(--gap-section);
 	background-color: var(--first-color);
 	margin: .5rem 0 .5rem 0;
 	border-radius: .2rem;
@@ -78,12 +79,17 @@
 	border-radius: .2rem;
 	background-color: var(--fourth-color);
 	text-align: center;
+	font-size: .5rem;
 }
 
 .onscreen__director,
 .onscreen__release-date {
 	font: var(--font-body-text);
-	font-size: .8rem;
+	font-size: .5rem;
+}
+
+.onscreen__director {
+	margin-top: .2rem;
 }
 
 .onscreen__director::before {
@@ -96,6 +102,126 @@
 
 .onscreen__text {
 	font: var(--font-body-text);
-	font-size: .6rem;
+	font-size: .4rem;
 	margin-top: .3rem;
+}
+
+/* Desktop */
+@media only screen and (max-width: 1800px) {
+	.onscreen__button {
+		width: 90%;
+		font-size: .8rem;
+	}
+	
+	.onscreen__card { 
+		width: 25vw;
+		height: 62.5vh; 
+	}
+	
+	.onscreen__info {
+		width: 25vw;
+		height: 62.5vh; 
+	}
+	.onscreen__title {
+		font-size: .6rem;
+	}
+	
+	.onscreen__director,
+	.onscreen__release-date {
+		font-size: .4rem;
+	}
+
+	.onscreen__text {
+		font-size: .6rem;
+	}
+} 
+
+@media only screen and (max-width: 1400px) {
+	.onscreen__button {
+		width: 90%;
+		font-size: 1rem;
+	}
+	
+	.onscreen__card { 
+		width: 30vw;
+		height: 67.5vh; 
+	}
+	
+	.onscreen__info {
+		width: 30vw;
+		height: 67.5vh; 
+	}
+	.onscreen__title {
+		font-size: .8rem;
+	}
+	
+	.onscreen__director,
+	.onscreen__release-date {
+		font-size: .6rem;
+	}
+
+	.onscreen__text {
+		font-size: .8rem;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.onscreen__button {
+		width: 90%;
+		font-size: 1.2rem;
+	}
+	
+	.onscreen__card { 
+		width: 42vw;
+		height: 55vh; 
+	}
+	
+	.onscreen__info {
+		width: 42vw;
+		height: 55vh; 
+	}
+	.onscreen__title {
+		font-size: 1rem;
+	}
+	
+	.onscreen__director,
+	.onscreen__release-date {
+		font-size: .8rem;
+	}
+
+	.onscreen__text {
+		font-size: 1rem;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+	.onscreen__button {
+		width: 90%;
+		font-size: 1.5rem;
+	}
+	
+	.onscreen__card { 
+		/* scroll-snap-align: start; */
+		width: 48vw;
+		height: 38vh; 
+		scroll-snap-align: start;
+	}
+	
+	.onscreen__info {
+		width: 48vw;
+		height: 38vh; 
+	}
+	.onscreen__title {
+		font-size: 1.5rem;
+	}
+	
+	.onscreen__director,
+	.onscreen__release-date {
+		font-size: 1rem;
+	}
+
+	.onscreen__text {
+		font-size: 1.3rem;
+	}
 }

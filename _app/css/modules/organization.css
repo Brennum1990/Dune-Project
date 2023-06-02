@@ -24,6 +24,10 @@
 	overflow: hidden;
 }
 
+.sidebar__organization-buttons:last-child {
+	border-radius: 0 0 0.2rem 0.2rem ;
+}
+
 .content__organization-name {
 	padding: .5rem 0 .5rem 0;
 }
@@ -57,10 +61,6 @@
 	font: var(--font-body-text);
 	margin-right: 1rem;
 	font-size: .5rem;
-}
-
-.sidebar__organization-buttons:last-child {
-	border-radius: 0 0 .2rem .2rem;
 }
 
 .sidebar__organization-buttons::after {
