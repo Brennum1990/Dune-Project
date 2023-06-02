@@ -22,3 +22,7 @@ button, select, a {
 h1 {
 	font: var(--font-header-text);
 }
+
+li {
+	list-style: none;
+}
